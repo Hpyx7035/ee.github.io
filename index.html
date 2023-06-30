@@ -1,9 +1,85 @@
-<p>能来到这里</p>
-<p>想必你一定认识站主罢！</p>
-<p>大声喊出他的名字！</p>
-<p>我是初三五班TF！</p>
-<p>CPDD！</p>
+<!--
+ * AyagawaSeirin's Page
+ * Last Update: 2023-02-05
+ * GitHub: https://github.com/AyagawaSeirin/
+ * Made with love by wnopxw
+ * 此个人主页运行于GithubPages，如果你也想使用，在我的公开仓库内即可找到源码。您可以任意修改，但请注明本原作者。
+-->
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>Hello</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AyagawaSeirin/homepage@double/mdui/css/mdui.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="icon" href="/assets/img/logo-circul-100.png">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?c8493223ca0fc5718b7da621552fdd73";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+<div id="rin-bg"></div>
+<main id="rin-main">
+    <div id="rin-headimg"></div>
+    <div class="rin-name">N&nbsp;&nbsp;e&nbsp;&nbsp;v&nbsp;&nbsp;er</div>
+     <title>网页中动态的显示系统日期时间</title>
+        <script language="JavaScript">
+            function startTime()   
+            {   
+                var today=new Date();//定义日期对象   
+                var yyyy = today.getFullYear();//通过日期对象的getFullYear()方法返回年    
+                var MM = today.getMonth()+1;//通过日期对象的getMonth()方法返回年    
+                var dd = today.getDate();//通过日期对象的getDate()方法返回年     
+                var hh=today.getHours();//通过日期对象的getHours方法返回小时   
+                var mm=today.getMinutes();//通过日期对象的getMinutes方法返回分钟   
+                var ss=today.getSeconds();//通过日期对象的getSeconds方法返回秒   
+                // 如果分钟或小时的值小于10，则在其值前加0，比如如果时间是下午3点20分9秒的话，则显示15：20：09   
+                MM=checkTime(MM);
+                dd=checkTime(dd);
+                mm=checkTime(mm);   
+                ss=checkTime(ss);    
+                var day; //用于保存星期（getDay()方法得到星期编号）
+                if(today.getDay()==0)   day   =   "星期日 "
+                if(today.getDay()==1)   day   =   "星期一 "
+                if(today.getDay()==2)   day   =   "星期二 "
+                if(today.getDay()==3)   day   =   "星期三 "
+                if(today.getDay()==4)   day   =   "星期四 "
+                if(today.getDay()==5)   day   =   "星期五 "
+                if(today.getDay()==6)   day   =   "星期六 "
+                document.getElementById('nowDateTimeSpan').innerHTML=yyyy+"-"+MM +"-"+ dd +" " + hh+":"+mm+":"+ss+"   " + day;   
+                setTimeout('startTime()',1000);//每一秒中重新加载startTime()方法
+            }   
+             
+            function checkTime(i)   
+            {   
+                if (i<10){
+                    i="0" + i;
+                }   
+                  return i;
+            }  
+        </script>
+    </head>
+    <body onload="startTime()">
+        <b><div class="rin-name">当前时间：<font color="#F012BE"><span id="nowDateTimeSpan"></span></font></div><b>
+          
 
-<ul>
-  <li> <a href="https://www.bilibili.com/">bilibili</a> </li>
-</ul>
+    <div class="rin-description">「初三五班TF正在CPDD」</div>
+    <div class="rin-tr"></div>
+    <a class="mdui-btn mdui-btn-raised rin-btn mdui-text-capitalize" href="detaile.html">咸鱼史莱姆</a>
+</main>
+<footer id="rin-footer">
+    <div>©2023 Seirin | Made with love by Autumn_bamboo | BG: <a href="https://bilibili.com" id="bg-link" target="_blank">Yee</a></div>
+</footer>
+<script src="https://cdn.jsdelivr.net/gh/AyagawaSeirin/homepage@double/mdui/js/mdui.min.js"></script>
+<script src="/assets/js/main.js"></script>
+  
+  
+</body> 
+</html>
